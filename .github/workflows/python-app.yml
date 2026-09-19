@@ -19,4 +19,6 @@ jobs:
             - name: Install dependencies
               run: pip install -r requirements.txt
             - name: Run Review Script
+            env:
+                GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
               run: python ./scripts/review.py  
